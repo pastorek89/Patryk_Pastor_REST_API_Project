@@ -5,6 +5,7 @@ import com.crud.tasks.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -18,6 +19,10 @@ public class DbService {
     }
 
     public Task getTaskById(final Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElseThrow(EntityNotFoundException::new);
+    }
+
+    public Task saveTask(final Task task) {
+        return repository.save(task);
     }
 }
