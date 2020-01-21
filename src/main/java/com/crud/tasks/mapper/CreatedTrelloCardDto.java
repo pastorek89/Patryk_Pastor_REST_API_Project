@@ -1,7 +1,5 @@
 package com.crud.tasks.mapper;
 
-import com.crud.tasks.domain.AttachmentsByType;
-import com.crud.tasks.domain.Badges;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
