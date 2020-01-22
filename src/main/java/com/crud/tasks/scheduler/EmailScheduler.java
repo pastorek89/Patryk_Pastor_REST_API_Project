@@ -29,7 +29,7 @@ public class EmailScheduler {
                 "Currently in database you got " + size + chooseWriteOutOption()));
     }
 
-    private String chooseWriteOutOption() {
+    public String chooseWriteOutOption() {
         long tasksQuantity = taskRepository.count();
         return (tasksQuantity == 0 || tasksQuantity > 1) ? " tasks." : " task.";
     }
